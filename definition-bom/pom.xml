@@ -87,6 +87,12 @@
                 <version>${flyway.version}</version>
             </dependency>
 
+            <!-- platform-->
+            <dependency>
+                <groupId>com.hup</groupId>
+                <artifactId>personal-framework-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- swagger2 -->
             <dependency>
                 <groupId>io.springfox</groupId>
