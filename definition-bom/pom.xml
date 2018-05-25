@@ -14,7 +14,7 @@
 
     <properties>
         <!-- spring-boot spring-cloud -->
-        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
+        <spring-boot.version>1.5.13.RELEASE</spring-boot.version>
         <spring-cloud.version>Edgware.SR3</spring-cloud.version>
 
         <!-- datasource -->
