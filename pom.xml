@@ -26,12 +26,12 @@
         </repository>
     </repositories>
 
-    <!--<pluginRepositories>-->
-    <!--<pluginRepository>-->
-    <!--<id>nexus</id>-->
-    <!--<url>http://118.31.20.148:8081/repository/nexus-public/</url>-->
-    <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <url>http://118.31.20.148:8081/repository/nexus-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <distributionManagement>
         <repository>
