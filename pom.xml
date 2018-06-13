@@ -8,7 +8,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-
         <module>definition-bom</module>
     </modules>
 
@@ -29,7 +28,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
-            <url>http://118.31.20.148:8081/repository/nexus-public/</url>
+            <url>http://118.31.20.148:8081/repository/maven-public/</url>
         </pluginRepository>
     </pluginRepositories>
 
