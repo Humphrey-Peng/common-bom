@@ -16,8 +16,8 @@
         <flyway.version>5.0.7</flyway.version>
         <flyway-maven-plugin.version>4.2.0</flyway-maven-plugin.version>
         <!-- swagger2 -->
-        <swagger2.version>2.8.0</swagger2.version>
-        <swagger2.ui.version>2.8.0</swagger2.ui.version>
+        <swagger2.version>2.9.2</swagger2.version>
+        <swagger2.ui.version>2.9.2</swagger2.ui.version>
         <lombok.version>1.16.18</lombok.version>
         <lombok-maven-plugin.version>1.16.18.0</lombok-maven-plugin.version>
         <docker-maver-plugin.version>1.0.0</docker-maver-plugin.version>
