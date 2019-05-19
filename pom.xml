@@ -8,28 +8,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <!-- spring-boot spring-cloud -->
-        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
-        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
-        <spring-boot-maven-plugin.version>1.5.10.RELEASE</spring-boot-maven-plugin.version>
-        <flyway.version>5.0.7</flyway.version>
-        <flyway-maven-plugin.version>4.2.0</flyway-maven-plugin.version>
-        <mybatis-starter.version>2.0.0</mybatis-starter.version>
-        <tk-mybatis.version>2.1.5</tk-mybatis.version>
-        <mybatis-generator.version>1.3.7</mybatis-generator.version>
-        <!-- swagger2 -->
-        <swagger2.version>2.9.2</swagger2.version>
-        <swagger2.ui.version>2.9.2</swagger2.ui.version>
-        <lombok.version>1.16.18</lombok.version>
-        <lombok-maven-plugin.version>1.16.18.0</lombok-maven-plugin.version>
-        <docker-maver-plugin.version>1.0.0</docker-maver-plugin.version>
-        <!-- okhttp -->
-        <okhttp.version>3.8.1</okhttp.version>
-
-        <persistence.version>1.0</persistence.version>
-    </properties>
-
     <repositories>
         <repository>
             <id>nexus</id>
@@ -63,6 +41,38 @@
             <url>http://118.31.20.148:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <properties>
+        <!-- spring-boot spring-cloud -->
+        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <spring-boot-maven-plugin.version>2.1.3.RELEASE</spring-boot-maven-plugin.version>
+
+        <flyway.version>5.0.7</flyway.version>
+        <flyway-maven-plugin.version>4.2.0</flyway-maven-plugin.version>
+
+        <mybatis-starter.version>2.0.0</mybatis-starter.version>
+        <tk-mybatis.version>2.1.5</tk-mybatis.version>
+        <mybatis-generator.version>1.3.7</mybatis-generator.version>
+        <!-- swagger2 -->
+        <swagger2.version>2.9.2</swagger2.version>
+        <swagger2.ui.version>2.9.2</swagger2.ui.version>
+        <lombok.version>1.16.18</lombok.version>
+        <lombok-maven-plugin.version>1.16.18.0</lombok-maven-plugin.version>
+        <docker-maver-plugin.version>1.0.0</docker-maver-plugin.version>
+        <!-- okhttp -->
+        <okhttp.version>3.8.1</okhttp.version>
+
+        <!-- json -->
+        <json-annotations.version>2.9.0</json-annotations.version>
+        <json-core.version>2.9.8</json-core.version>
+        <json-databind.version>2.9.8</json-databind.version>
+        <persistence.version>1.0</persistence.version>
+
+        <!-- security-oauth -->
+        <security-oauth.version>2.3.5.RELEASE</security-oauth.version>
+    </properties>
+
 
     <dependencyManagement>
         <dependencies>
@@ -133,6 +143,27 @@
                 <groupId>javax.persistence</groupId>
                 <artifactId>persistence-api</artifactId>
                 <version>${persistence.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${json-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${json-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${json-databind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${security-oauth.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
