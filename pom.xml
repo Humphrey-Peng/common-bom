@@ -74,6 +74,16 @@
         <security-oauth.version>2.3.5.RELEASE</security-oauth.version>
         <oauth-autoconfigure.version>2.1.2.RELEASE</oauth-autoconfigure.version>
         <spring-beans.version>5.1.5.RELEASE</spring-beans.version>
+
+        <!-- 自定义jar版本 -->
+        <account-model.version>1.0-SNAPSHOT</account-model.version>
+        <user-model.version>1.0-SNAPSHOT</user-model.version>
+        <jwt-starter.version>1.0-SNAPSHOT</jwt-starter.version>
+        <advice-starter.version>1.0-SNAPSHOT</advice-starter.version>
+        <mybatis-hp-starter.version>1.0-SNAPSHOT</mybatis-hp-starter.version>
+        <redis-starter.version>1.0-SNAPSHOT</redis-starter.version>
+        <common-starter.version>1.0-SNAPSHOT</common-starter.version>
+        <common-utils.version>1.0-SNAPSHOT</common-utils.version>
     </properties>
 
 
@@ -184,6 +194,48 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
                 <version>${spring-beans.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>account-model</artifactId>
+                <version>${account-model.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>user-model</artifactId>
+                <version>${user-model.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>jwt-starter</artifactId>
+                <version>${jwt-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>response-advice-starter</artifactId>
+                <version>${advice-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>mybatis-starter</artifactId>
+                <version>${mybatis-hp-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>redis-starter</artifactId>
+                <version>${redis-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>common-starter</artifactId>
+                <version>${common-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zan.hu</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${common-utils.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
