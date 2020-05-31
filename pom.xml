@@ -8,57 +8,19 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>Nexus Repository</name>
-            <url>http://118.31.20.148:8081/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <url>http://118.31.20.148:8081/repository/maven-public/</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <distributionManagement>
-        <repository>
-            <id>nexus</id>
-            <name>Releases</name>
-            <url>http://118.31.20.148:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus</id>
-            <name>Snapshot</name>
-            <url>http://118.31.20.148:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <properties>
         <!-- spring-boot spring-cloud -->
         <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <spring-boot-maven-plugin.version>2.1.3.RELEASE</spring-boot-maven-plugin.version>
 
-        <flyway.version>5.0.7</flyway.version>
-        <flyway-maven-plugin.version>4.2.0</flyway-maven-plugin.version>
-
         <mybatis-starter.version>2.0.0</mybatis-starter.version>
         <tk-mybatis.version>2.1.5</tk-mybatis.version>
-        <mybatis-generator.version>1.3.7</mybatis-generator.version>
         <!-- swagger2 -->
         <swagger2.version>2.9.2</swagger2.version>
         <swagger2.ui.version>2.9.2</swagger2.ui.version>
         <lombok.version>1.16.18</lombok.version>
-        <lombok-maven-plugin.version>1.16.18.0</lombok-maven-plugin.version>
+        <lombok-maven-plugin.version>1.16.18</lombok-maven-plugin.version>
         <docker-maver-plugin.version>1.0.0</docker-maver-plugin.version>
         <!-- okhttp -->
         <okhttp.version>3.8.1</okhttp.version>
@@ -75,15 +37,6 @@
         <oauth-autoconfigure.version>2.1.2.RELEASE</oauth-autoconfigure.version>
         <spring-beans.version>5.1.5.RELEASE</spring-beans.version>
 
-        <!-- 自定义jar版本 -->
-        <account-model.version>1.0-SNAPSHOT</account-model.version>
-        <user-model.version>1.0-SNAPSHOT</user-model.version>
-        <jwt-starter.version>1.0-SNAPSHOT</jwt-starter.version>
-        <advice-starter.version>1.0-SNAPSHOT</advice-starter.version>
-        <mybatis-hp-starter.version>1.0-SNAPSHOT</mybatis-hp-starter.version>
-        <redis-starter.version>1.0-SNAPSHOT</redis-starter.version>
-        <common-starter.version>1.0-SNAPSHOT</common-starter.version>
-        <common-utils.version>1.0-SNAPSHOT</common-utils.version>
     </properties>
 
 
@@ -107,12 +60,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-core</artifactId>
-                <version>${flyway.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-starter.version}</version>
@@ -122,12 +69,6 @@
                 <artifactId>mapper-spring-boot-starter</artifactId>
                 <version>${tk-mybatis.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
-                <version>${mybatis-generator.version}</version>
-            </dependency>
-
             <!-- swagger2 -->
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -195,75 +136,6 @@
                 <artifactId>spring-beans</artifactId>
                 <version>${spring-beans.version}</version>
             </dependency>
-
-
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>account-model</artifactId>
-                <version>${account-model.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>user-model</artifactId>
-                <version>${user-model.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>jwt-starter</artifactId>
-                <version>${jwt-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>response-advice-starter</artifactId>
-                <version>${advice-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>mybatis-starter</artifactId>
-                <version>${mybatis-hp-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>redis-starter</artifactId>
-                <version>${redis-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>common-starter</artifactId>
-                <version>${common-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zan.hu</groupId>
-                <artifactId>common-core</artifactId>
-                <version>${common-utils.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot-maven-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.flywaydb</groupId>
-                    <artifactId>flyway-maven-plugin</artifactId>
-                    <version>${flyway-maven-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.projectlombok</groupId>
-                    <artifactId>lombok-maven-plugin</artifactId>
-                    <version>${lombok-maven-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.spotify</groupId>
-                    <artifactId>docker-maven-plugin</artifactId>
-                    <version>${docker-maver-plugin.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 </project>
